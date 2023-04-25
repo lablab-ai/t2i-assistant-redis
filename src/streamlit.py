@@ -32,7 +32,7 @@ if button:
             "image": (
                 image.name,
                 image.read(),
-                "image/png",
+                f"image/{file_extension}",
             ),
         }
 

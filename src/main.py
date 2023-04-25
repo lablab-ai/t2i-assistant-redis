@@ -11,8 +11,6 @@ from src.utils import index_data
 ### DATA PART ####
 clip = CLIP()
 
-import redis
-
 redis_client = redis.Redis(
     host="redis-10292.c23738.us-east-1-mz.ec2.cloud.rlrcp.com",
     port=10292,
@@ -37,9 +35,6 @@ def query_image(caption_features: np.array, n=1):
     )
 
     return result.docs
-
-
-s = query_image(np.random.rand(1024).astype(np.float32))
 
 
 ## API PART ####
